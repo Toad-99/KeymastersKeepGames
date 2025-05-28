@@ -35,12 +35,6 @@ class SeaOfThievesGame(Game):
     def optional_game_constraint_templates(self) -> List[GameObjectiveTemplate]:
         return [
             GameObjectiveTemplate(
-                label="Sail as a level 5 emissary for the following trading company: TRADING_COMPANY",
-                data={
-                    "TRADING_COMPANY": (self.trading_companies, 1),
-                },
-            ),
-            GameObjectiveTemplate(
                 label="Set sail as the following ship type: SHIP_TYPE",
                 data={
                     "SHIP_TYPE": (self.ship_types, 1),
@@ -52,8 +46,8 @@ class SeaOfThievesGame(Game):
             ),
             GameObjectiveTemplate(
                 label="Complete any Emergent Encounters (Skeleton Ship, Meg, Kraken)",
-                data=dict(),
-            )
+                data=dict()
+            ),
         ]
     
     def game_objective_templates(self) -> List[GameObjectiveTemplate]:
@@ -142,6 +136,15 @@ class SeaOfThievesGame(Game):
                 is_time_consuming=False,
                 is_difficult=True,
                 weight=1,
+            ),
+            GameObjectiveTemplate(
+                label="Reach Emissary level 5 in the TRADING_COMPANY",
+                data={
+                    "TRADING_COMPANY": (self.trading_companies, 1),
+                },
+                is_time_consuming=False,
+                is_difficult=True,
+                weight=2,
             ),
         ]
 
