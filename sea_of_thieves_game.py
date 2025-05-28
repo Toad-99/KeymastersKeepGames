@@ -143,8 +143,8 @@ class SeaOfThievesGame(Game):
                     "TRADING_COMPANY": (self.trading_companies, 1),
                 },
                 is_time_consuming=False,
-                is_difficult=True,
-                weight=2,
+                is_difficult=False,
+                weight=3,
             ),
         ]
 
