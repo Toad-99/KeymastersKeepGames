@@ -23,7 +23,6 @@ class SeaOfThievesGame(Game):
     platform = KeymastersKeepGamePlatforms.PC
 
     platforms_other = [
-        KeymastersKeepGamePlatforms.AND,
         KeymastersKeepGamePlatforms.PS5,
         KeymastersKeepGamePlatforms.XSX,
         KeymastersKeepGamePlatforms.XONE,
