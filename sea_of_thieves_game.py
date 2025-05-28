@@ -46,7 +46,7 @@ class SeaOfThievesGame(Game):
             ),
             GameObjectiveTemplate(
                 label="Complete any Emergent Encounters (Skeleton Ship, Meg, Kraken)",
-                data=dict()
+                data=dict(),
             ),
         ]
     
