@@ -86,7 +86,7 @@ class SeaOfThievesGame(Game):
                 },
                 is_time_consuming=False,
                 is_difficult=False,
-                weight=2,
+                weight=3,
             ),
             GameObjectiveTemplate(
                 label="Complete the following voyage: VOYAGE while only using WEAPONS",
@@ -144,7 +144,7 @@ class SeaOfThievesGame(Game):
                 },
                 is_time_consuming=False,
                 is_difficult=False,
-                weight=3,
+                weight=2,
             ),
         ]
 
@@ -170,16 +170,6 @@ class SeaOfThievesGame(Game):
             "Galleon",
         ]
     
-    @staticmethod
-    def medley_voyages() -> List[str]:
-        return [
-            "A Medley of Gold Hoarders Voyages",
-            "An Ashen Medley of Gold Hoarders Voyages",
-            "A Medley of Order of Souls Voyages",
-            "An Ashen Medley of Order of Souls Voyages",
-            "A Medley of Merchant Alliance Voyages",
-            "An Ashen Medley of Merchant Alliance Voyages",
-        ]
     
     @staticmethod
     def world_events() -> List[str]:
@@ -279,8 +269,6 @@ class SeaOfThievesGame(Game):
     def voyages_athena(self) -> List[str]:
         return [
             "Legend of the Veil",
-            "A Voyage of Legends",
-            "An Ashen Voyage of Legends",
             "A Legendary Search for Cursed Treasure",
             "A Legendary Search for the Skull of Destiny",
         ]
@@ -328,6 +316,32 @@ class SeaOfThievesGame(Game):
             voyages.extend(self.voyages_tallTales[:])
 
         return sorted(voyages)
+
+    @functools.cached_property
+    def medley_voyages_base() -> List[str]:
+        return [
+            "A Medley of Gold Hoarders Voyages",
+            "An Ashen Medley of Gold Hoarders Voyages",
+            "A Medley of Order of Souls Voyages",
+            "An Ashen Medley of Order of Souls Voyages",
+            "A Medley of Merchant Alliance Voyages",
+            "An Ashen Medley of Merchant Alliance Voyages",
+        ]
+    
+    @functools.cached_property
+    def medley_voyages_athena() -> List[str]:
+        return [
+            "A Voyage of Legends",
+            "An Ashen Voyage of Legends",
+        ]
+    
+    def medley_voyages(self) -> list[str]:
+        medley_voyages: List[str] = self.medley_voyages_base[:]
+
+        if self.include_athena_voyages:
+            medley_voyages.extend(self.medley_voyages_athena[:])
+
+        return sorted(medley_voyages)
 
 
 # Archipelago Options
