@@ -48,6 +48,10 @@ class SeaOfThievesGame(Game):
                 label="Complete any Emergent Encounters (Skeleton Ship, Meg, Kraken)",
                 data=dict(),
             ),
+            GameObjectiveTemplate(
+                label="Sell all the loot you collect before moving on to the next voyage",
+                data=dict(),
+            ),
         ]
     
     def game_objective_templates(self) -> List[GameObjectiveTemplate]:
