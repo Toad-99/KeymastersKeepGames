@@ -52,12 +52,16 @@ class SeaOfThievesGame(Game):
                 label="Sell all the loot you collect before moving on to the next voyage",
                 data=dict(),
             ),
+            GameObjectiveTemplate(
+                label="Don't sell any loot acquired during challenges",
+                data=dict(),
+            )
         ]
     
     def game_objective_templates(self) -> List[GameObjectiveTemplate]:
         templates: List[GameObjectiveTemplate] = [
             GameObjectiveTemplate(
-                label="Complete the following voyage: VOYAGE",
+                label="Complete the following: VOYAGE",
                 data={
                     "VOYAGE": (self.voyages, 1),
                 },
@@ -66,7 +70,7 @@ class SeaOfThievesGame(Game):
                 weight=4,
             ),
             GameObjectiveTemplate(
-                label="Complete the following voyages: VOYAGES",
+                label="Complete the following: VOYAGES",
                 data={
                     "VOYAGES": (self.voyages, 3),
                 },
@@ -75,7 +79,7 @@ class SeaOfThievesGame(Game):
                 weight=4,
             ),
             GameObjectiveTemplate(
-                label="Complete the following voyages: VOYAGES",
+                label="Complete VOYAGES",
                 data={
                     "VOYAGES": (self.voyages, 5),
                 },
@@ -84,7 +88,7 @@ class SeaOfThievesGame(Game):
                 weight=2,
             ),
             GameObjectiveTemplate(
-                label="Complete the following medley voyage: MEDLEY_VOYAGE",
+                label="Complete MEDLEY_VOYAGE",
                 data={
                     "MEDLEY_VOYAGE": (self.medley_voyages, 1),
                 },
@@ -93,7 +97,7 @@ class SeaOfThievesGame(Game):
                 weight=3,
             ),
             GameObjectiveTemplate(
-                label="Complete the following voyage: VOYAGE while only using WEAPONS",
+                label="Complete VOYAGE while only using WEAPONS",
                 data={
                     "VOYAGE": (self.voyages, 1),
                     "WEAPONS": (self.weapons, 2),
@@ -103,7 +107,7 @@ class SeaOfThievesGame(Game):
                 weight=2,
             ),
             GameObjectiveTemplate(
-                label="Complete the following voyages: VOYAGES while only using WEAPONS",
+                label="Complete VOYAGES while only using WEAPONS",
                 data={
                     "VOYAGES": (self.voyages, 3),
                     "WEAPONS": (self.weapons, 2),
@@ -113,7 +117,7 @@ class SeaOfThievesGame(Game):
                 weight=2,
             ),
             GameObjectiveTemplate(
-                label="Complete the following voyages: VOYAGES while only using WEAPONS",
+                label="Complete VOYAGES while only using WEAPONS",
                 data={
                     "VOYAGES": (self.voyages, 5),
                     "WEAPONS": (self.weapons, 2),
@@ -272,7 +276,6 @@ class SeaOfThievesGame(Game):
     @functools.cached_property
     def voyages_athena(self) -> List[str]:
         return [
-            "Legend of the Veil",
             "A Legendary Search for Cursed Treasure",
             "A Legendary Search for the Skull of Destiny",
         ]
@@ -337,6 +340,7 @@ class SeaOfThievesGame(Game):
         return [
             "A Voyage of Legends",
             "An Ashen Voyage of Legends",
+            "Legend of the Veil",
         ]
     
     def medley_voyages(self) -> list[str]:
