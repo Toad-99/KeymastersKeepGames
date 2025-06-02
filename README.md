@@ -48,7 +48,7 @@ The Keymasters Keep implementation includes trials for finding buried treasure, 
 ## Burger Shop
 Burger Shop is a time management game where the player serves burgers, fries and other burger-related foods and drinks to customers. It is the first game in the Burger Shop series and was originally released for Windows in 2007.
 
-[steam](https://store.steampowered.com/app/730840/Burger_Shop/)
+[Steam](https://store.steampowered.com/app/730840/Burger_Shop/)
 
 The Keymasters Keep implementation includes trials for getting medals in challenge or relax mode, and getting the Perfect rating on levels in story mode.
 
