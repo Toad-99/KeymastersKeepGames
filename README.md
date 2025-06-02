@@ -3,7 +3,7 @@ My game implementations for [Keymasters Keep](https://github.com/SerpentAI/Archi
 a custom world for [Archipelago](https://archipelago.gg/) - created by SerpentAI.
 
 # Games
-- [Sea of Thieves](https://github.com/Toad-99/KeymasterKeepGames/main/README.md#L10)
+- Sea of Thieves
 - Sid Meier's Pirates! (2004)
 - Burger Shop
 
@@ -38,3 +38,19 @@ sea_of_thieves_include_athenas_fortune:
     'true': 0
 ```
 
+## Sid Meier's Pirates! (2004)
+Sid Meier's Pirates! (also known as Sid Meier's Pirates!: Live the Life) is a 2004 strategy, action and adventure video game developed by Firaxis Games. A remake of Sid Meier's earlier 1987 game of the same name. Sail the Caribbean, marauding all on the high seas or ally your ship and crew as a privateer in search of riches - the life you choose is up to you. Face dogged enemies, raid unsuspecting villages, woo fair maidens, avoid capture or dig for buried treasure. Discover what it takes to become one of the most famous pirates in history!
+
+[Steam](https://store.steampowered.com/app/3920/Sid_Meiers_Pirates/)
+
+The Keymasters Keep implementation includes trials for finding buried treasure, besting the famous pirates in battle, giving gifts to governor's daughters, getting wedded, completing minigames, sacking cities, upgrading your ships, recruiting specialist crew members, having specific ship types in your fleet, becoming the most infamous pirate and rescuing family members. 
+
+## Burger Shop
+Burger Shop is a time management game where the player serves burgers, fries and other burger-related foods and drinks to customers. It is the first game in the Burger Shop series and was originally released for Windows in 2007.
+
+[steam](https://store.steampowered.com/app/730840/Burger_Shop/)
+
+The Keymasters Keep implementation includes trials for getting medals in challenge or relax mode, and getting the Perfect rating on levels in story mode.
+
+### Credits
+- Keymasters Keep implementation for Burger Shop made by Reign
