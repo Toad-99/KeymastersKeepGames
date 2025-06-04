@@ -325,7 +325,7 @@ class SeaOfThievesGame(Game):
         return sorted(voyages)
 
     @functools.cached_property
-    def medley_voyages_base() -> List[str]:
+    def medley_voyages_base(self) -> List[str]:
         return [
             "A Medley of Gold Hoarders Voyages",
             "An Ashen Medley of Gold Hoarders Voyages",
@@ -336,7 +336,7 @@ class SeaOfThievesGame(Game):
         ]
     
     @functools.cached_property
-    def medley_voyages_athena() -> List[str]:
+    def medley_voyages_athena(self) -> List[str]:
         return [
             "A Voyage of Legends",
             "An Ashen Voyage of Legends",
