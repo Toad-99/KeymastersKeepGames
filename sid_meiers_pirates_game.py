@@ -55,7 +55,7 @@ class SidMeiersPiratesGame(Game):
     def game_objective_templates(self) -> List[GameObjectiveTemplate]:
         templates: List[GameObjectiveTemplate] = [
             GameObjectiveTemplate(
-                label="Dig up some buried treasure or find the lost city of the incas.",
+                label="Dig up some buried treasure or find a lost city.",
                 data=dict(),
                 is_time_consuming=False,
                 is_difficult=False,
@@ -135,7 +135,7 @@ class SidMeiersPiratesGame(Game):
             GameObjectiveTemplate(
                 label="Sack the following city: CITY.",
                 data={
-                    "CITy": (self.cities, 1)
+                    "CITY": (self.cities, 1)
                 },
                 is_time_consuming=False,
                 is_difficult=False,
